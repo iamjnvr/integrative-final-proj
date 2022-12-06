@@ -1,20 +1,65 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-button expand="block">Home</ion-button><br>
+      <ion-button expand="block">Book</ion-button> <br>
+      <ion-button expand="block">Package</ion-button> <br>
+      <ion-button expand="block">Account</ion-button>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>AdventureTime </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-card class="img">
+      <img src="http://adventuretimesbooking.ml/assets/images/logo.png" />
+      <ion-card-header>
+        <ion-card-title>Adventure is worthwhile!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Travel to the most breathtaking paradise in the Philippines. So what are you waiting for? Book with Us!
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Adventure is worthwhile!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Travel to the most breathtaking paradise in the Philippines. So what are you waiting for? Book with Us!
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Adventure is worthwhile!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Travel to the most breathtaking paradise in the Philippines. So what are you waiting for? Book with Us!
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Adventure is worthwhile!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Travel to the most breathtaking paradise in the Philippines. So what are you waiting for? Book with Us!
+      </ion-card-content>
+    </ion-card>
   </div>
+
 </ion-content>
