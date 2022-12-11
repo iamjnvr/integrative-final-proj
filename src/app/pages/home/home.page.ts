@@ -20,4 +20,8 @@ export class HomePage implements OnInit {
       })
     );
   }
+
+  goToBook() {
+    this.router.navigate(['book']);
+  }
 }

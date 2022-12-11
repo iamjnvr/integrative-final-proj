@@ -1,0 +1,14 @@
+ion-card {
+  transition: 250ms;
+}
+ion-card:hover {
+  box-shadow: 0 0 15px var(--ion-color-dark);
+}
+
+ion-label {
+  text-transform: capitalize;
+}
+
+ion-icon {
+  transform: scale(1.3);
+}

@@ -7,8 +7,40 @@
 
     font-size: 1.3em;
     color: var(--ion-color-dark);
+    padding: 5px;
 
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000;
+    box-shadow: 1px 1px 10px black;
+  }
+}
+
+.services {
+  h1 {
+    color: var(--ion-color-warning);
+  }
+  hr {
+    background-color: var(--ion-color-warning);
+  }
+  h3 {
+    color: var(--ion-color-success);
+  }
+}
+
+.gallery {
+  h1 {
+    color: var(--ion-color-warning);
+  }
+  hr {
+    background-color: var(--ion-color-warning);
+  }
+  app-gallery {
+    margin: 0 90px;
+  }
+
+  ion-item {
+    margin: 0 10px;
+  }
+
+  ion-spinner {
+    margin: auto;
   }
 }

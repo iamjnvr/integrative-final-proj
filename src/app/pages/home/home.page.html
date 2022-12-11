@@ -20,73 +20,66 @@
     <div class="ion-padding">
       <p>Travel to the most breathtaking paradise in the Philippines</p>
       <p>So what are you waiting for?</p>
-      <ion-button>Book Now</ion-button>
+      <ion-button (click)="goToBook()" fill="clear">Book Now</ion-button>
     </div>
 
-    <h1 class="heading">SERVICES</h1>
-    <div class="box-container">
-      <div class="box">
-        <h3><ion-icon name="business"></ion-icon> Affordable Hotels</h3>
-        <p>
-          Always Lowest Price Guaranteed! Book Now, Pay Later & Save Money.
-          We're Available Live 24/7 to Help.
-        </p>
-      </div>
-      <div class="box">
-        <h3><ion-icon name="wine"></ion-icon>Food and Drinks</h3>
-        <p>
-          Seize The Moment, Remember All Those Women On the "Titanic" Who Waved
-          off the Dessert Cart
-        </p>
-      </div>
-      <div class="box">
-        <h3><ion-icon name="airplane"></ion-icon> Fastest Travel</h3>
-        <p>
-          The memories of traveling form some of the mose fascinating chapters
-          in your life's book. Enjoy the journey!
-        </p>
-      </div>
-      <div class="box">
-        <i class="fas fa-hiking"></i>
-        <h3><ion-icon name="map"></ion-icon>Adventures</h3>
-        <p>
-          May your Adventures bring you closer together, even as they take you
-          far away home
-        </p>
+    <div class="ion-padding services">
+      <h1>Services</h1>
+      <hr />
+      <div>
+        <div>
+          <h3><ion-icon name="business"></ion-icon> Affordable Hotels</h3>
+          <p>
+            Always Lowest Price Guaranteed! Book Now, Pay Later & Save Money.
+            We're Available Live 24/7 to Help.
+          </p>
+        </div>
+        <div class="box">
+          <h3><ion-icon name="wine"></ion-icon>Food and Drinks</h3>
+          <p>
+            Seize The Moment, Remember All Those Women On the "Titanic" Who
+            Waved off the Dessert Cart
+          </p>
+        </div>
+        <div class="box">
+          <h3><ion-icon name="airplane"></ion-icon> Fastest Travel</h3>
+          <p>
+            The memories of traveling form some of the mose fascinating chapters
+            in your life's book. Enjoy the journey!
+          </p>
+        </div>
+        <div class="box">
+          <i class="fas fa-hiking"></i>
+          <h3><ion-icon name="map"></ion-icon>Adventures</h3>
+          <p>
+            May your Adventures bring you closer together, even as they take you
+            far away home
+          </p>
+        </div>
       </div>
     </div>
-    <br />
-    <br />
-    <h1 class="heading">GALLERY</h1>
-    <div class="box-container">
-      <div class="box">
-        <h3>Batangas</h3>
-        <ion-img
-          src="https://media-cdn.tripadvisor.com/media/photo-s/0c/a5/c2/27/outdoor-adult-kiddie.jpg"
-        >
-        </ion-img>
-      </div>
-      <div class="box">
-        <h3>Bohol</h3>
-        <ion-img
-          src="https://www.journeyera.com/wp-content/uploads/2020/05/LUXURY-RESORTS-ON-PANGLAO-ISLAND-BOHOL-96482424-768x432.jpg.webp"
-        >
-        </ion-img>
-      </div>
-      <div class="box">
-        <h3>Cebu</h3>
-        <ion-img
-          src="https://media-cdn.tripadvisor.com/media/photo-s/08/45/25/70/bayfront-hotel-cebu.jpg"
-        >
-        </ion-img>
-      </div>
-      <div class="box">
-        <i class="fas fa-hiking"></i>
-        <h3>Pangasinan</h3>
-        <ion-img
-          src="https://media-cdn.tripadvisor.com/media/photo-s/1a/c9/94/7f/photo0jpg.jpg"
-        >
-        </ion-img>
-      </div></div
-  ></ion-content>
+    <div class="ion-padding gallery">
+      <h1>Gallery</h1>
+      <hr />
+      <app-gallery
+        src="https://media-cdn.tripadvisor.com/media/photo-s/0c/a5/c2/27/outdoor-adult-kiddie.jpg"
+        name="batangas"
+      ></app-gallery>
+      <app-gallery
+        src="https://www.journeyera.com/wp-content/uploads/2020/05/LUXURY-RESORTS-ON-PANGLAO-ISLAND-BOHOL-96482424-768x432.jpg.webp"
+        name="bohol"
+      ></app-gallery>
+      <app-gallery
+        src="https://media-cdn.tripadvisor.com/media/photo-s/08/45/25/70/bayfront-hotel-cebu.jpg"
+        name="Cebu"
+      ></app-gallery>
+      <app-gallery
+        src="https://media-cdn.tripadvisor.com/media/photo-s/1a/c9/94/7f/photo0jpg.jpg"
+        name="Pangasinan"
+      ></app-gallery>
+      <ion-item>
+        <ion-spinner name="dots"></ion-spinner>
+      </ion-item>
+    </div>
+  </ion-content>
 </div>
