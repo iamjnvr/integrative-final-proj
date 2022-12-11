@@ -3,36 +3,76 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    redirectTo: 'loader',
+    pathMatch: 'full',
   },
   {
     path: 'book',
-    loadChildren: () => import('./book/book.module').then( m => m.BookPageModule)
-  },
-  {
-    path: 'book',
-    loadChildren: () => import('./book/book.module').then( m => m.BookPageModule)
+    loadChildren: () =>
+      import('./pages/book/book.module').then((m) => m.BookPageModule),
   },
   {
     path: 'package',
-    loadChildren: () => import('./package/package.module').then( m => m.PackagePageModule)
+    loadChildren: () =>
+      import('./pages/packages/packages.module').then(
+        (m) => m.PackagesPageModule
+      ),
   },
   {
     path: 'account',
-    loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
+    loadChildren: () =>
+      import('./pages/account/account.module').then((m) => m.AccountPageModule),
   },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomePageModule),
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/login/login.module').then((m) => m.LoginPageModule),
+  },
+  {
+    path: 'account',
+    loadChildren: () =>
+      import('./pages/account/account.module').then((m) => m.AccountPageModule),
+  },
+  {
+    path: 'book',
+    loadChildren: () =>
+      import('./pages/book/book.module').then((m) => m.BookPageModule),
+  },
+  {
+    path: 'packages',
+    loadChildren: () =>
+      import('./pages/packages/packages.module').then(
+        (m) => m.PackagesPageModule
+      ),
+  },
+  {
+    path: 'packagesinfo',
+    loadChildren: () =>
+      import('./pages/packagesinfo/packagesinfo.module').then(
+        (m) => m.PackagesinfoPageModule
+      ),
+  },
+  {
+    path: 'loader',
+    loadChildren: () =>
+      import('./pages/loader/loader.module').then((m) => m.LoaderPageModule),
+  },  {
+    path: 'history',
+    loadChildren: () => import('./pages/history/history.module').then( m => m.HistoryPageModule)
+  },
+
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

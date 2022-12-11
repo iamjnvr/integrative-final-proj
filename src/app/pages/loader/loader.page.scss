@@ -1,0 +1,20 @@
+.flex-center {
+  height: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  div {
+    margin-bottom: 25px;
+  }
+
+  .secondary {
+    color: var(--ion-color-secondary);
+  }
+}
+
+ion-spinner {
+  transform: scale(2);
+}
