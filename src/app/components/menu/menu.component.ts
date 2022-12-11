@@ -26,6 +26,7 @@ export class MenuComponent implements OnInit {
       let map = JSON.parse(acct);
       this.acctName = map.username;
     }
+    this.logged = false;
   }
 
   goToHome() {
