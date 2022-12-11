@@ -1,11 +1,14 @@
-// ion-header {
-//   text-align: center;
-// }
-// ion-header .img {
-//   text-align: center;
-//   width: 50%;
-// }
-// ion-card-header.ios {
-//   display: flex;
-//   flex-flow: column-reverse;
-// }
+.image-text {
+  position: relative;
+  p {
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+
+    font-size: 1.3em;
+    color: var(--ion-color-dark);
+
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+}

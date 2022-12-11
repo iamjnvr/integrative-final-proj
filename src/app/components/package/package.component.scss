@@ -1,0 +1,24 @@
+h1,
+.root {
+  margin: 15px;
+  div {
+    margin: 15px;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  color: var(--ion-color-success);
+}
+
+.root {
+  ion-card {
+    ion-card-title {
+      color: var(--ion-color-secondary);
+    }
+  }
+
+  .name {
+    text-transform: capitalize;
+  }
+}

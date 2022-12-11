@@ -1,34 +1,19 @@
-<ion-content [fullscreen]="true">
-  <ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <a href="\home"
-        ><ion-button expand="block" class="home">Home</ion-button><br
-      /></a>
-      <a routerLink="/book"
-        ><ion-button expand="block">Book</ion-button> <br
-      /></a>
-      <a routerLink="/package"
-        ><ion-button expand="block">Package</ion-button> <br
-      /></a>
-      <a routerLink="/account"
-        ><ion-button expand="block">Account</ion-button></a
-      >
-    </ion-content>
-  </ion-menu>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button value="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-        <ion-title>Account</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </div></ion-content
->
+<ion-content [fullscreen]="true">
+  <ion-avatar>
+    <img
+      src="https://i.pinimg.com/736x/e6/c5/56/e6c55690faa927b2c0339ee9a6d0817f.jpg"
+      alt="profile"
+  /></ion-avatar>
+  <div class="info">
+    <p class="title">Hello there, [username]</p>
+  </div>
+</ion-content>

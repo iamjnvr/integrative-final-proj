@@ -43,6 +43,11 @@ export class MenuComponent implements OnInit {
   goToAbout() {
     this.router.navigate(['about']);
   }
+
+  goToHistory() {
+    this.router.navigate(['history']);
+  }
+
   goToAccount() {
     this.router.navigate(['account']);
   }

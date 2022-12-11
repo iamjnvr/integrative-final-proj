@@ -1,9 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button value="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-item (click)="register()">
+    <ion-icon name="at-outline" slot="start"></ion-icon>
+    <ion-label>Register</ion-label>
+  </ion-item>
 </ion-content>
