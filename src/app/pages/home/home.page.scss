@@ -13,6 +13,14 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  .image-text {
+    p {
+      color: var(--ion-color-light);
+    }
+  }
+}
+
 .services {
   h1 {
     color: var(--ion-color-warning);

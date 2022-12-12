@@ -59,13 +59,6 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'packages/:num',
-    loadChildren: () =>
-      import('./pages/packagesinfo/packagesinfo.module').then(
-        (m) => m.PackagesinfoPageModule
-      ),
-  },
-  {
     path: 'loader',
     loadChildren: () =>
       import('./pages/loader/loader.module').then((m) => m.LoaderPageModule),

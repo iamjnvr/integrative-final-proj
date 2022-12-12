@@ -1,3 +1,30 @@
+@media (prefers-color-scheme: light) {
+  ion-card {
+    ion-card-title {
+      --color: var(--ion-color-light);
+    }
+    ion-card-subtitle {
+      --color: var(--ion-color-light);
+    }
+    --background: var(--ion-color-tertiary);
+  }
+
+  .holder {
+    padding: 25px 0;
+    background: var(--ion-color-secondary);
+  }
+
+  h1 {
+    font-weight: bold;
+    color: var(--ion-color-light) !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  ion-card-title {
+    color: var(--ion-color-dark);
+  }
+}
+
 h1,
 .root {
   margin: 15px;
@@ -8,17 +35,15 @@ h1,
 
 h1 {
   text-transform: uppercase;
-  color: var(--ion-color-success);
+  color: var(--ion-color-secondary);
 }
 
 .root {
-  ion-card {
-    ion-card-title {
-      color: var(--ion-color-secondary);
-    }
-  }
-
   .name {
     text-transform: capitalize;
   }
+}
+
+.desc {
+  text-align: justify;
 }

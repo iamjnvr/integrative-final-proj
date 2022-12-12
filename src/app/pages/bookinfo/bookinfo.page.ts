@@ -12,15 +12,27 @@ export class BookinfoPage implements OnInit {
       name: 'Microtel Wyndham',
       image:
         '../../../assets/media/hotels/batangas/microtel_wyndham_batangas/highres (2).jpg',
+      description:
+        'Microtel Wyndham is a well-known hotel in Batangas. It is famous for its luxurious style foods as well as their great customer service.',
     },
     {
       name: 'Birds of Paradise',
       image:
         '../../../assets/media/hotels/bohol/Bird_of_Paradise/highres (1).jpg',
+      description:
+        'Birds of Paradise is a well-known hotel in Bohol. It is famous for its luxurious style foods as well as their great customer service.',
     },
     {
       name: "SMAK's Hotel",
       image: "../../../assets/media/hotels/cebu/SMAK's Hotel/lowres.jpg",
+      description:
+        "SMAK's Hotel is a well-known hotel in Cebu. It is famous for its luxurious style foods as well as their great customer service.",
+    },
+    {
+      name: 'G1 Lodge',
+      image: '../../../assets/media/hotels/baguio/G1_Lodge/highres (2).jpg',
+      description:
+        'G1 Lodge is a well-known hotel in Baguio. It is famous for its luxurious style foods as well as their great customer service.',
     },
   ];
   data!: any;
