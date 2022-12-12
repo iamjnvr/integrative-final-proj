@@ -1,3 +1,29 @@
 app-package {
   margin-bottom: 20px;
 }
+
+.loading {
+  margin: 10px;
+  ion-skeleton-text {
+    margin-bottom: 10px;
+  }
+  ion-spinner {
+    margin: auto;
+  }
+}
+
+.hotel-load {
+  display: flex;
+  align-items: center;
+  ion-skeleton-text {
+    height: min-content;
+  }
+  ion-skeleton-text:last-of-type {
+    margin-left: 20px;
+    height: 15px;
+  }
+}
+
+ion-searchbar {
+  padding: 0;
+}

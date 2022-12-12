@@ -5,8 +5,56 @@
     </ion-buttons>
     <ion-title>Book</ion-title>
   </ion-toolbar>
+  <ion-searchbar placeholder="Search for your a hotel"></ion-searchbar>
 </ion-header>
 
-<ion-content> </ion-content>
-
-<ion-content [fullscreen]="true"></ion-content>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>G1 Lodge</ion-card-title>
+      <ion-card-subtitle> Baguio </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img
+        src="../../../assets/media/hotels/baguio/G1_Lodge/highres (1).jpg"
+        alt="hotel in baguio"
+      />
+      <p>We created a new kind of stay in baguio..</p>
+      <ion-button expand="full" (click)="goBook(3)"> Know more.. </ion-button>
+      <ion-button expand="full" color="danger"> Book now.. </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>SMAK's Hotel</ion-card-title>
+      <ion-card-subtitle> Cebu </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img
+        src="../../../assets/media/hotels/cebu/SMAK's Hotel/highres.jpg"
+        alt="hotel in cebu"
+      />
+      <p>Check out SMAK's hotel now more eco-friendly!</p>
+      <ion-button expand="full" (click)="goBook(1)"> Know more.. </ion-button>
+      <ion-button expand="full" color="danger"> Book now.. </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Microtel Wyndham</ion-card-title>
+      <ion-card-subtitle> Batangas </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img
+        src="../../../assets/media/hotels/batangas/microtel_wyndham_batangas/highres (2).jpg"
+        alt="hotel in batangas"
+      />
+      <p>We have been awarded with the best customer service..</p>
+      <ion-button expand="full" (click)="goBook(0)"> Know more.. </ion-button>
+      <ion-button expand="full" color="danger"> Book now.. </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-spinner name="dots"></ion-spinner>
+  </ion-card>
+</ion-content>

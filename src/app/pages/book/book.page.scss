@@ -1,0 +1,42 @@
+@media (prefers-color-scheme: light) {
+  ion-card {
+    --background: #3dc2ffaa;
+    ion-card-title {
+      --color: var(--ion-color-light) !important;
+    }
+
+    ion-card-subtitle {
+      --color: var(--ion-color-light) !important;
+    }
+
+    p {
+      color: var(--ion-color-light) !important;
+    }
+  }
+
+  ion-spinner {
+    --color: var(--ion-color-light);
+  }
+}
+
+ion-searchbar {
+  padding-top: 0;
+}
+
+ion-card {
+  border-radius: 10px;
+  text-align: center;
+
+  ion-card-title {
+    --color: var(--ion-color-secondary);
+  }
+  p {
+    margin: 10px 0;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  ion-card-title {
+    font-weight: bold;
+  }
+}

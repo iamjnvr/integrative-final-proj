@@ -28,3 +28,18 @@
 .icon {
   width: 200px;
 }
+
+@media (prefers-color-scheme: light) {
+  ion-toolbar {
+    --background: var(--ion-color-secondary);
+
+    ion-title {
+      --color: var(--ion-color-light);
+    }
+
+    ion-menu-button,
+    ion-back-button {
+      --color: var(--ion-color-light);
+    }
+  }
+}

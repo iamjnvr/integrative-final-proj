@@ -45,6 +45,13 @@ const routes: Routes = [
       import('./pages/book/book.module').then((m) => m.BookPageModule),
   },
   {
+    path: 'book/:num',
+    loadChildren: () =>
+      import('./pages/bookinfo/bookinfo.module').then(
+        (m) => m.BookinfoPageModule
+      ),
+  },
+  {
     path: 'packages',
     loadChildren: () =>
       import('./pages/packages/packages.module').then(
@@ -52,29 +59,27 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'packagesinfo',
-    loadChildren: () =>
-      import('./pages/packagesinfo/packagesinfo.module').then(
-        (m) => m.PackagesinfoPageModule
-      ),
-  },
-  {
     path: 'loader',
     loadChildren: () =>
       import('./pages/loader/loader.module').then((m) => m.LoaderPageModule),
-  },  {
+  },
+  {
     path: 'history',
-    loadChildren: () => import('./pages/history/history.module').then( m => m.HistoryPageModule)
+    loadChildren: () =>
+      import('./pages/history/history.module').then((m) => m.HistoryPageModule),
   },
   {
     path: 'about',
-    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+    loadChildren: () =>
+      import('./pages/about/about.module').then((m) => m.AboutPageModule),
   },
   {
     path: 'register',
-    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () =>
+      import('./pages/register/register.module').then(
+        (m) => m.RegisterPageModule
+      ),
   },
-
 ];
 
 @NgModule({
