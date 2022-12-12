@@ -1,15 +1,25 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button value="" defaultHref="home"></ion-back-button>
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
     </ion-buttons>
-    <ion-title>Login</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/register">Register</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item (click)="register()">
-    <ion-icon name="at-outline" slot="start"></ion-icon>
-    <ion-label>Register</ion-label>
-  </ion-item>
+  <div id="header">
+    <h1>Login</h1>
+    <img src="assets/icon/favicon.png" />
+  </div>
+
+  <form id="form">
+    <app-input placeholder="Email"></app-input>
+    <app-input type="password" placeholder="Password"></app-input>
+    <ion-button expand="block" shape="round">Login</ion-button>
+  </form>
 </ion-content>
