@@ -18,14 +18,11 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     let acct = localStorage.getItem('account');
-    console.log(acct);
 
     if (acct === null) {
       this.logged = false;
-      console.log('logged false');
     } else {
       this.logged = true;
-      console.log('logged true');
       let map = JSON.parse(acct);
       this.acctName = map.username;
     }
@@ -33,14 +30,11 @@ export class MenuComponent implements OnInit {
 
   ngAfterContentChecked() {
     let acct = localStorage.getItem('account');
-    console.log(acct);
 
     if (acct === null) {
       this.logged = false;
-      console.log('logged false');
     } else {
       this.logged = true;
-      console.log('logged true');
       let map = JSON.parse(acct);
       this.acctName = map.username;
     }
