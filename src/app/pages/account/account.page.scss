@@ -1,6 +1,8 @@
 ion-avatar {
-  width: 200px;
+  width: 160px;
   height: auto;
+  margin-top: -88px;
+  margin-left: 98px;
 }
 
 .info {
@@ -9,3 +11,53 @@ ion-avatar {
     font-size: 1.3em;
   }
 }
+ion-content{
+  .main-header{
+    
+      height: 40vh;
+      width: 150%;
+      background: linear-gradient(90deg, var(--ion-color-tertiary) 10%, var(--ion-color-primary) 100%);
+      box-shadow: 0 1px 10px var(--ion-color-light);
+      border-radius: 0 0 60% 60%;
+      margin-left: -14vh;
+      margin-top: -100px;
+  
+  }
+  .name{
+    font-size: 25px;
+    position: absolute;
+    margin-top: -143px;
+    color: white;
+    text-align: center;
+    margin-left: 117px;
+    font-family: lato;
+  }
+  p{
+    display: inline-block;
+    margin: 0px;
+  }
+  .information{
+    margin-left: 75px;
+    margin-top: 15px;
+  }
+  hr{
+      
+      height: 1px !important;
+      width: 500px !important;
+      background: rgb(206, 203, 203) !important;
+      display: block !important;
+      font-size: 2em !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      margin-top: 14px;
+      margin-bottom: 14px;
+  }
+  .info-person{
+    margin-left: 40px;
+  }
+  ion-button{
+    margin-top: 30px;
+  }
+}
+
+
