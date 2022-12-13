@@ -23,25 +23,25 @@
 
 .services {
   h1 {
-    color: rgb(1, 1, 199);
+    color: var(--ion-color-secondary);
   }
   hr {
-    background-color: var(--ion-color-warning);
+    background-color: var(--ion-color-secondary);
   }
   h3 {
-    color:rgb(1, 1, 199);
+    color: var(--ion-color-secondary);
   }
   p {
-    color: rgb(0, 0, 0);
+    color: var(--ion-color-dark);
   }
 }
 
 .gallery {
   h1 {
-    color: rgb(1, 1, 199);
+    color: var(--ion-color-secondary);
   }
   hr {
-    background-color: var(--ion-color-warning);
+    background-color: var(--ion-color-secondary);
   }
   app-gallery {
     margin: 0 90px;
