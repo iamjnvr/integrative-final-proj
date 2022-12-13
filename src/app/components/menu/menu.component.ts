@@ -18,6 +18,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     let acct = localStorage.getItem('account');
+    console.log(acct);
+
+    this.logged = false;
 
     if (acct === null) {
       this.logged = false;
@@ -26,7 +29,6 @@ export class MenuComponent implements OnInit {
       let map = JSON.parse(acct);
       this.acctName = map.username;
     }
-    this.logged = false;
   }
 
   goToHome() {

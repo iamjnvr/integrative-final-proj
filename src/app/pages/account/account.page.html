@@ -8,56 +8,50 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<div class="main-header">
-</div>
+  <div class="main-header"></div>
 
-<p class="name">Maria Clara</p>
-<ion-avatar>
-  <img
-    src="https://i.pinimg.com/736x/e6/c5/56/e6c55690faa927b2c0339ee9a6d0817f.jpg"
-    alt="profile"
-/></ion-avatar>
+  <p class="name">Hello there!</p>
+  <ion-avatar>
+    <img
+      src="https://i.pinimg.com/736x/e6/c5/56/e6c55690faa927b2c0339ee9a6d0817f.jpg"
+      alt="profile"
+  /></ion-avatar>
 
-<div class="information">
-  <ion-icon name="person-outline"></ion-icon>
-  <p class="info-person">Maria Clara</p>
-  
-</div>
-<hr>
-<div class="information">
-  <ion-icon name="female-outline"></ion-icon>
-  <p class="info-person">Female</p>
-  
-</div>
+  <div class="information">
+    <ion-icon name="person-outline"></ion-icon>
+    <p class="info-person">{{account.username}}</p>
+  </div>
+  <hr />
+  <div class="information">
+    <ion-icon name="female-outline"></ion-icon>
+    <p class="info-person">Male</p>
+  </div>
 
-<hr>
-<div class="information">
-  <ion-icon name="gift-outline"></ion-icon>
-  <p class="info-person">Dec 13, 2022</p>
-  
-</div>
-<hr>
+  <hr />
+  <div class="information">
+    <ion-icon name="gift-outline"></ion-icon>
+    <p class="info-person">Dec 13, 2022</p>
+  </div>
+  <hr />
 
-<div class="information">
-  <ion-icon name="call-outline"></ion-icon>
-  <p class="info-person">09288342333</p>
-  
-</div>
-<hr>
-<div class="information">
-  <ion-icon name="mail-outline"></ion-icon>
-  <p class="info-person">mariaclara@gmail.com</p>
-  
-</div>
-<hr>
+  <div class="information">
+    <ion-icon name="call-outline"></ion-icon>
+    <p class="info-person">{{account.number}}</p>
+  </div>
+  <hr />
+  <div class="information">
+    <ion-icon name="mail-outline"></ion-icon>
+    <p class="info-person">{{account.email}}</p>
+  </div>
+  <hr />
 
-
-<div class="information">
-  <ion-icon name="eye-outline"></ion-icon>
-  <p class="info-person">Password</p>
-  
-</div>
-<hr>
-<ion-button expand="block" color="secondary">Edit Profile</ion-button>
-
+  <div class="information">
+    <ion-icon name="eye-outline"></ion-icon>
+    <p class="info-person">Password</p>
+  </div>
+  <hr />
+  <ion-button expand="block" color="secondary">Edit Profile</ion-button>
+  <ion-button expand="block" color="secondary" (click)="logout()"
+    >Logout</ion-button
+  >
 </ion-content>

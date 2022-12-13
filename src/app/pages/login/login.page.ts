@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,9 +8,36 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  constructor(private router: Router) {}
+  form!: FormGroup;
+  found: boolean = true;
 
-  ngOnInit() {}
+  constructor(private router: Router, private formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    this.found = true;
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+    });
+  }
+
+  login() {
+    let email = this.form.controls['email'].value;
+    let password = this.form.controls['password'].value;
+
+    let credentials = localStorage.getItem('account');
+
+    if (credentials == null) {
+      this.found = false;
+      console.log('not found');
+    } else {
+      let json_cred = JSON.parse(credentials);
+
+      if (json_cred.email === email && json_cred.password === password) {
+        this.router.navigate(['account']);
+      }
+    }
+  }
 
   register() {
     this.router.navigate(['register']);

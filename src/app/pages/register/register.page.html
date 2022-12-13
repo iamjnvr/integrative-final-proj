@@ -11,14 +11,83 @@
 
 <ion-content>
   <div class="main-header"></div>
-    <h1>Create your <br />Account</h1>
+  <h1>Create your <br />Account</h1>
 
-  <form id="form">
-    <app-input placeholder="Username"></app-input>
-    <app-input placeholder="Email"></app-input>
-    <app-input placeholder="Mobile Number"></app-input>
-    <app-input type="password" placeholder="Password"></app-input>
-    <ion-button expand="block" shape="round">Join Us</ion-button>
+  <form id="form" [formGroup]="form">
+    <ion-label
+      color="danger"
+      *ngIf="form.get('username')?.touched && form.get('username')?.errors?.['required']"
+      >* Username is required</ion-label
+    >
+    <ion-label
+      color="danger"
+      *ngIf="form.get('username')?.touched && form.get('username')?.errors?.['minlength']"
+      >* Username should be longer</ion-label
+    >
+    <ion-item class="ion-margin-bottom">
+      <ion-input
+        placeholder="Choose your username"
+        formControlName="username"
+      ></ion-input>
+    </ion-item>
+    <ion-label
+      color="danger"
+      *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['email']"
+      >* Email is invalid</ion-label
+    >
+    <ion-label
+      color="danger"
+      *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']"
+      >* Email is required</ion-label
+    >
+    <ion-item class="ion-margin-bottom">
+      <ion-input
+        type="email"
+        placeholder="Please input your email"
+        formControlName="email"
+      ></ion-input>
+    </ion-item>
+    <ion-label
+      color="danger"
+      *ngIf="form.get('number')?.touched && form.get('number')?.errors?.['required']"
+      >* Mobile number is required</ion-label
+    >
+    <ion-label
+      color="danger"
+      *ngIf="form.get('number')?.touched && form.get('number')?.errors?.['pattern']"
+      >* Mobile number should only contain numbers</ion-label
+    >
+    <ion-item class="ion-margin-bottom">
+      <ion-input
+        type="tel"
+        placeholder="Mobile Number"
+        formControlName="number"
+      ></ion-input>
+    </ion-item>
+    <ion-label
+      color="danger"
+      *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']"
+      >* Password is required</ion-label
+    >
+    <ion-label
+      color="danger"
+      *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['minlength']"
+      >* Password should be longer</ion-label
+    >
+    <ion-item class="ion-margin-bottom">
+      <ion-input
+        type="password"
+        placeholder="Input Password"
+        formControlName="password"
+      ></ion-input>
+    </ion-item>
+    <ion-button
+      [disabled]="!form.valid"
+      expand="block"
+      shape="round"
+      (click)="register()"
+      >Join Us</ion-button
+    >
   </form>
 
   <p>

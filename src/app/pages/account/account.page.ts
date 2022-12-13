@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account',
@@ -7,8 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountPage implements OnInit {
   // Resolve all variables required
+  account!: any;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    let credentials = localStorage.getItem('account');
+
+    if (credentials === null) {
+      this.router.navigate(['home']);
+    } else {
+      let json_cred = JSON.parse(credentials);
+
+      console.log(json_cred);
+
+      this.account = json_cred;
+    }
+  }
+
+  logout() {
+    localStorage.removeItem('account');
+    console.log(localStorage.getItem('account'));
+    this.router.navigate(['home']);
+  }
 }

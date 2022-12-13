@@ -7,19 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  logged: boolean = false;
-
   constructor(private router: Router) {}
 
-  ngOnInit() {
-    //TODO: REMOVE
-    localStorage.setItem(
-      'account',
-      JSON.stringify({
-        username: 'Alds',
-      })
-    );
-  }
+  ngOnInit() {}
 
   goToBook() {
     this.router.navigate(['book']);
