@@ -28,7 +28,6 @@ export class AccountPage implements OnInit {
 
   logout() {
     localStorage.removeItem('account');
-    console.log(localStorage.getItem('account'));
     this.router.navigate(['home']);
   }
 }

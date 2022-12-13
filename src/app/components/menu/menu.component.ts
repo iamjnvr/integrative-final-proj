@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  @Input() logged: boolean = false;
+  @Input() logged!: boolean;
 
   @Input() contentId?: string;
   @Input() page!: string;
@@ -20,12 +20,27 @@ export class MenuComponent implements OnInit {
     let acct = localStorage.getItem('account');
     console.log(acct);
 
-    this.logged = false;
+    if (acct === null) {
+      this.logged = false;
+      console.log('logged false');
+    } else {
+      this.logged = true;
+      console.log('logged true');
+      let map = JSON.parse(acct);
+      this.acctName = map.username;
+    }
+  }
+
+  ngAfterContentChecked() {
+    let acct = localStorage.getItem('account');
+    console.log(acct);
 
     if (acct === null) {
       this.logged = false;
+      console.log('logged false');
     } else {
       this.logged = true;
+      console.log('logged true');
       let map = JSON.parse(acct);
       this.acctName = map.username;
     }
